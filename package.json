@@ -4,8 +4,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "NODE_ENV=development && rm -rf .next && NODE_OPTIONS='--inspect' next dev -p 8080",
-    "build": "rm -rf .next && next build",
+    "dev": "NODE_OPTIONS='--inspect' next dev -p 8080",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "commit": "cz",
@@ -21,8 +21,8 @@
     "test:coverage": "jest --coverage",
     "generate-assets": "yarn generate-assets-index",
     "prebuild": "yarn generate-assets",
-    "postinstall": "[ ! -d \"./scripts\" ] || yarn generate-assets",
-    "generate-assets-index": "[ -f \"./scripts/generateAssetsIndex.js\" ] && node scripts/generateAssetsIndex.js",
+    "postinstall": "yarn generate-assets",
+    "generate-assets-index": "node scripts/generateAssetsIndex.js",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
@@ -134,6 +134,10 @@
     ],
     "*.{css,scss}": [
       "stylelint --quiet --syntax=scss --fix",
+      "prettier --write"
+    ],
+    "!(path/to/excluded/dir/**/*)*.ts": [
+      "eslint --fix",
       "prettier --write"
     ]
   },

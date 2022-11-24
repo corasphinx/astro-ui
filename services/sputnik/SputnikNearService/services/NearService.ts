@@ -8,7 +8,7 @@ import {
   transactions,
   utils,
 } from 'near-api-js';
-import { parseContract } from 'near-contract-parser';
+// import { parseContract } from 'near-contract-parser';
 
 import { CreateDaoCustomInput, CreateDaoInput } from 'types/dao';
 
@@ -663,24 +663,25 @@ export class NearService extends BaseService {
         return null;
       }
 
-      const keyStore = new keyStores.BrowserLocalStorageKeyStore();
+      // const keyStore = new keyStores.BrowserLocalStorageKeyStore();
 
-      const near = new Near({
-        ...this.nearConfig,
-        keyStore,
-      });
+      // const near = new Near({
+      //   ...this.nearConfig,
+      //   keyStore,
+      // });
 
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
-      const { code_base64: codeBase64 } = await near.connection.provider.query({
-        account_id: accountId,
-        finality: 'final',
-        request_type: 'view_code',
-      });
+      
+      // const { code_base64: codeBase64 } = await near.connection.provider.query({
+      //   account_id: accountId,
+      //   finality: 'final',
+      //   request_type: 'view_code',
+      // });
 
-      const parsed = parseContract(codeBase64);
+      // const parsed = parseContract(codeBase64);
 
-      const methods = parsed?.methodNames;
+      const methods = null; // parsed?.methodNames;
 
       return methods || null;
     } catch (e) {
