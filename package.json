@@ -135,10 +135,6 @@
     "*.{css,scss}": [
       "stylelint --quiet --syntax=scss --fix",
       "prettier --write"
-    ],
-    "!(path/to/excluded/dir/**/*)*.ts": [
-      "eslint --fix",
-      "prettier --write"
     ]
   },
   "resolutions": {
