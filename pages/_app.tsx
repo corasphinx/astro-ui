@@ -77,9 +77,7 @@ function App({ Component, pageProps }: MyAppProps): JSX.Element | null {
                 <ModalProvider>
                   <SocketProvider>
                     <SearchResults>
-                      <Head>
-                        <title>Astro</title>
-                      </Head>
+                      
                       <PageLayout appVersion={appVersion}>
                         <ErrorBoundary>
                           {getLayout(<Component {...pageProps} />)}
