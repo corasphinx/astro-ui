@@ -85,7 +85,7 @@
     "react-cropper": "^2.1.8",
     "react-dom": "17.0.2",
     "react-hook-form": "^7.12.2",
-    "react-i18next": "11.8.8",
+    "react-i18next": "11.8.13",
     "react-infinite-scroll-component": "^6.1.0",
     "react-linkify": "^1.0.0-alpha",
     "react-measure": "^2.5.2",
