@@ -116,7 +116,7 @@
     "ts-mixer": "^6.0.1",
     "uniqid": "^5.4.0",
     "utf-8-validate": "^5.0.7",
-    "victory": "^35.9.0",
+    "victory": "^36.0.0",
     "victory-area": "^35.10.0",
     "yup": "^0.32.9"
   },
